@@ -15,9 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include  # Add include here
+from django.urls import path, include,re_path
+from django.views.generic import RedirectView
+
+from myapp import views  # Add include here
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path(r'^.*/$',RedirectView.as_view(url='/default_page/')),
     path('api/', include('myapp.urls')),  # Ensure include is used correctly here
 ]
