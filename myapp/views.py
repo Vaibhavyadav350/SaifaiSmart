@@ -11,10 +11,10 @@ class ProductListGet(APIView):
     def get(self, request):
         db = client['Mart']
         collection = db['Grocery']
-        name_query = request.query_params.get('category', None)
+        name_query = request.query_params.get('name', None)
         query = {}  
         if name_query:
-            query['category'] = name_query  
+            query['name'] = name_query  
         
         documents = collection.find(query)
         
