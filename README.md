@@ -32,7 +32,7 @@ waitress-serve --port=8000 smart.wsgi:application
 
 ### Endpoints
 
-- **GET** `/api/products/get`: Retrieve a list of grocery products in `JSON`. 
+- **GET** `/api/products/get`: Retrieve a list of grocery products in `json` format. 
 ```json
 [
     {
@@ -53,8 +53,7 @@ waitress-serve --port=8000 smart.wsgi:application
 ```
 
 - **POST** `/api/products/v1/post` : Add a new grocery product to the database.
-```
-
+```json
 {
     "name": "Bread",
     "category": "Bakery",
