@@ -27,7 +27,6 @@ class ProductListGet(APIView):
             doc['category'] = str(doc.get('category', ''))
             doc['price'] = str(doc.get('price', ''))
             doc['description'] = str(doc.get('description', ''))
-            doc['image'] = str(doc.get('image', ''))
             data.append(doc)
 
         serializer = DocumentSerializer(data, many=True)

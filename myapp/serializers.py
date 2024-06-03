@@ -7,4 +7,3 @@ class DocumentSerializer(serializers.Serializer):
     category = serializers.CharField(required=False, allow_blank=True, default="")
     price = serializers.CharField(required=False, allow_blank=True, default="")
     description = serializers.CharField(required=False, allow_blank=True, default="")
-    image = serializers.ImageField(max_length=None, allow_empty_file=False, use_url=True)
