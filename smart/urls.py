@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import path, include,re_path
 from django.views.generic import RedirectView
 
-from myapp import views  # Add include here
+from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^.*/$',RedirectView.as_view(url='/default_page/')),
-    path('api/', include('myapp.urls')),  # Ensure include is used correctly here
+    path('api/', include('myapp.urls')),
 ]
